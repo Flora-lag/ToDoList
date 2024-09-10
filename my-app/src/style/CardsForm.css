@@ -1,0 +1,53 @@
+.article-card{
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #dfe3e6;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #da44abad;
+    
+}
+.text-card{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.task-delete{
+    margin-bottom: 15px;
+    padding-left: 210px;
+    cursor: pointer;
+}
+.task-change{
+    cursor: pointer;
+    margin-top: 10px;
+}
+.card-tag{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.save{
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #2eb96a;
+    color: #fff;
+    border-radius: 10px;
+    height: 40px;
+    padding: 3px 13px;
+    margin-left: 2px;
+    border: 1px solid #dfe3e6;
+    cursor: pointer;
+    box-shadow: 5px 5px  #035124;
+}
+.save:active{
+    box-shadow: 3px 3px #035124 ;
+}
+.edit-input{
+    font-size: 16px;
+    font-weight: 500;
+    background: #f9f9f9;
+    color: black;
+    border: 1px solid #dfe3e6;
+    border-radius: 7px;
+}

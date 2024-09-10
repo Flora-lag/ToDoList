@@ -1,0 +1,26 @@
+.app{
+    display: grid;
+    grid-template-rows: 150px auto;
+    background-color: #ff9999;  
+}
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 8px;
+    margin-bottom: 12vw;
+    background-color: #ff9999;     
+}
+.head{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 3rem;
+    background-color: #ff9999;  
+}
+.flower{
+   background-image: url("./assets/iris.png");
+   position: sticky;
+   background-repeat: repeat-x;
+   background-color: #ff9999;  
+}
+
+
