@@ -3,9 +3,9 @@ import '../style/TagTypeForm.css';
 
 const TagType = ({nameTag, handleTags, selected}) =>{
     const tagStyle = {
-        Munka: {backgroundColor: "#cc0000"},
-        Személyes: {backgroundColor: "#6666ff"},
-        Családi: {backgroundColor: "#2cb093"},
+        Work: {backgroundColor: "#cc0000"},
+        Personal: {backgroundColor: "#6666ff"},
+        Family: {backgroundColor: "#2cb093"},
         default: {backgroundColor: "#dfe3e6"},
     }
     return(

@@ -20,7 +20,7 @@ const ToDoList = ({setToDo}) =>{
     const handleSubmit = (event) => {
         event.preventDefault();
         if(!taskTo.task.trim()){
-            alert("Feladat megnevezése kötelező!")
+            alert("Please name your task!")
             return
         }
         setToDo((p) => {
@@ -51,20 +51,20 @@ const ToDoList = ({setToDo}) =>{
     return (
         <header className='do-head'>
                 <form onSubmit={handleSubmit}>
-                    <input type='text' className='task-add' placeholder='Új feladat megadása' name='task' value={taskTo.task} onChange={inputChange} required/>
+                    <input type='text' className='task-add' placeholder='New Task' name='task' value={taskTo.task} onChange={inputChange} required/>
                     <div className='types'>
                         <div>
-                            <TagType nameTag="Munka" handleTags={handleTags} selected={showTags("Munka")}/>
-                            <TagType nameTag="Személyes" handleTags={handleTags} selected={showTags("Személyes")}/>
-                            <TagType nameTag="Családi" handleTags={handleTags} selected={showTags("Családi")}/> 
+                            <TagType nameTag="Work" handleTags={handleTags} selected={showTags("Work")}/>
+                            <TagType nameTag="Personal" handleTags={handleTags} selected={showTags("Personal")}/>
+                            <TagType nameTag="Family" handleTags={handleTags} selected={showTags("Family")}/> 
                         </div>
                         <div>
                             <select className='select-status' name='status' value={taskTo.status} onChange={inputChange}>
-                                <option value="megcs">Megcsinálandó</option>
-                                <option value="foly">Folyamatban</option>
-                                <option value="kesz">Kész</option>
+                                <option value="megcs">To-Do</option>
+                                <option value="foly">In Progress</option>
+                                <option value="kesz">Done</option>
                             </select>
-                            <button type='submit' className='add-button'>Megadás</button>
+                            <button type='submit' className='add-button'>Add</button>
                         </div>
                     </div>
                 </form>

@@ -7,18 +7,21 @@ const Task = ({nameTag, tasks, status, deleteTask, editTask, moveTask}) => {
     return(
         <section className='app-task'>
             <b>{nameTag}</b>
-           {tasks.filter(task => task.status === status).map((task, index) => (
+           {tasks.filter(task => task.status === status).map((task, index) => {
+            const taskIndex = tasks.findIndex(t => t === task);
+            return(
             <Cards
-                key={index}
+                key={taskIndex}
                 nameTag={task.task}
                 tags={task.tags || []}
-                deleteTask={() => deleteTask(index)}
+                deleteTask={() => deleteTask(taskIndex)}
                 editTask={editTask}
-                index={index}
+                index={taskIndex}
                 moveTask={moveTask}
                 currentStatus={task.status}
             />
-           ))}
+            );
+        })}
         </section>  
     );
 };

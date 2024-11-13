@@ -36,12 +36,12 @@ const App = () => {
   return(
       <>
       <div className='app'>
-        <header className='head'>Feladatok</header>
+        <header className='head'>Tasks</header>
         <ToDoList setToDo={setToDo} />
         <main className='main'>
-        <Task nameTag="Megcsinálandó 🪷" tasks={tasks} className='box' status="megcs" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
-        <Task nameTag="Folyamatban 💮" tasks={tasks} status="foly" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
-        <Task nameTag="Elkészített 🌸" tasks={tasks} status="kesz" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
+        <Task nameTag="To-Do 🪷" tasks={tasks} className='box' status="megcs" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
+        <Task nameTag="In Progress 💮" tasks={tasks} status="foly" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
+        <Task nameTag="Completed 🌸" tasks={tasks} status="kesz" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
         </main> 
       </div>
       <footer className='app'>

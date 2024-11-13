@@ -38,16 +38,16 @@ const Cards = ({nameTag, tags=[], deleteTask, editTask, index, moveTask, current
             {isEdit ? (
                 <button className="save" onClick={editSubmit}>Mentés</button>
             ): 
-            <div className="task-change" title="szerkesztés" onClick={handleClick}>✏️</div>
+            <div className="task-change" title="change" onClick={handleClick}>✏️</div>
             }
             
-            <div className="task-delete" title="törlés" onClick={() => deleteTask(index)}>❌</div>
+            <div className="task-delete" title="delete" onClick={() => deleteTask(index)}>❌</div>
             <div className="task-move" >{currentStatus !== "megcs" && (
-                <button onClick={() => moveTask(index, "megcs")} className="mb" title="megcsinálandó">📌</button>)}</div>
+                <button onClick={() => moveTask(index, "megcs")} className="mb" title="todo">📌</button>)}</div>
             <div className="task-move" >{currentStatus !== "foly" && (
-                <button onClick={() => moveTask(index, "foly")} className="mb" title="folyamatban">⚙️</button>)}</div>
+                <button onClick={() => moveTask(index, "foly")} className="mb" title="in progress">⚙️</button>)}</div>
             <div className="task-move" >{currentStatus !== "kesz" && (
-                <button onClick={() => moveTask(index, "kesz")} className="mb" title="kész">✔️</button>)}</div>    
+                <button onClick={() => moveTask(index, "kesz")} className="mb" title="completed">✔️</button>)}</div>    
 
         </article>
     )
