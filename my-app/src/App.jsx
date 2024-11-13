@@ -19,19 +19,29 @@ const App = () => {
   const editTask = (indexTasks, newData) => {
     const updated = [...tasks];
     updated[indexTasks] = {
-      ...updated[indexTasks], ...newData,};
+      ...updated[indexTasks],
+      ...newData,};
     
     setToDo(updated);
   }
+  const moveTasks = (indexTasks, newStatus) => {
+    const updated =[...tasks];
+    updated[indexTasks] = {
+      ...updated[indexTasks],
+      status: newStatus,
+    };
+    setToDo(updated)
+  }
+
   return(
       <>
       <div className='app'>
         <header className='head'>Feladatok</header>
         <ToDoList setToDo={setToDo} />
         <main className='main'>
-        <Task nameTag="Megcsinálandó 🪷" tasks={tasks} className='box' status="megcs" deleteTask={deleteTask} editTask={editTask}/>
-        <Task nameTag="Folyamatban 💮" tasks={tasks} status="foly" deleteTask={deleteTask} editTask={editTask}/>
-        <Task nameTag="Elkészített 🌸" tasks={tasks} status="kesz" deleteTask={deleteTask} editTask={editTask}/>
+        <Task nameTag="Megcsinálandó 🪷" tasks={tasks} className='box' status="megcs" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
+        <Task nameTag="Folyamatban 💮" tasks={tasks} status="foly" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
+        <Task nameTag="Elkészített 🌸" tasks={tasks} status="kesz" deleteTask={deleteTask} editTask={editTask} moveTask={moveTasks}/>
         </main> 
       </div>
       <footer className='app'>

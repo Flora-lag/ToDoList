@@ -19,6 +19,10 @@ const ToDoList = ({setToDo}) =>{
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if(!taskTo.task.trim()){
+            alert("Feladat megnevezése kötelező!")
+            return
+        }
         setToDo((p) => {
             return [...p, taskTo];
         });
@@ -47,7 +51,7 @@ const ToDoList = ({setToDo}) =>{
     return (
         <header className='do-head'>
                 <form onSubmit={handleSubmit}>
-                    <input type='text' className='task-add' placeholder='Új feladat megadása' name='task' value={taskTo.task} onChange={inputChange}/>
+                    <input type='text' className='task-add' placeholder='Új feladat megadása' name='task' value={taskTo.task} onChange={inputChange} required/>
                     <div className='types'>
                         <div>
                             <TagType nameTag="Munka" handleTags={handleTags} selected={showTags("Munka")}/>

@@ -10,8 +10,8 @@ const TagType = ({nameTag, handleTags, selected}) =>{
     }
     return(
      <button type="button" className='tag' 
-        style={selected ? tagStyle[nameTag] : tagStyle.default}
+        style={selected ? tagStyle[nameTag] ||  tagStyle.default : tagStyle.default}
         onClick={() => handleTags(nameTag)}>{nameTag}</button>
      )
 }
-export default TagType
+export default TagType;
